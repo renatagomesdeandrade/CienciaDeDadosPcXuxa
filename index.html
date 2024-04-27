@@ -10,7 +10,7 @@
 <body>
   <!-- DIV que será manipulada -->
   <div id="manipula">
-    <p>Com base nos argumentos apresentados na aula, é possivel entender que uma coisa é uma coisa e outra coisa é outra coisa, admito que não concordo nem discordo, muito pelo contrário.
+    <p class="paragrafo">Com base nos argumentos apresentados na aula, é possivel entender que uma coisa é uma coisa e outra coisa é outra coisa, admito que não concordo nem discordo, muito pelo contrário.
     </p>
     <p class="paragrafo">É factivel que a Terra é um dos planetas mais conhecidos do mundo, mesmo sabendo que a vida é uma sucessão de sucessivos que sucedem sucessivamente sem cessar.Agora, mais do que nunca, é a hora, afinal, o importante é o que importa, pois onde quer que você esteja, você sempre estará lá.
     </p>
@@ -31,11 +31,11 @@
     <input type="button" value="Tamanho Fonte" onclick="mudatamanhofonte()" />
     <!--Fim Botão 02-->
 
-    <!-- Botão 03 - -->
+    <!-- Botão 03 - Cor Fonte -->
     <input type="button" value="Cor Fonte" onclick="mudacorfonte()" />
     <!--Fim Botão 03-->
 
-    <!-- Botão 04 -  -->
+    <!-- Botão 04 -  Mudar background div -->
     <input type="button" value="Back Div" onclick="backdiv()" />
     <!--Fim Botão 04-->
 
@@ -51,11 +51,11 @@
     <input type="button" value="Incluir Borda" onclick="border()" />
     <!--Fim Botão 07-->
 
-    <!-- Botão 08 - Excluir Borda -->
+    <!-- Botão 08 - Excluir borda -->
     <input type="button" value="Excluir Borda" onclick="excluirborder()" />
     <!--Fim Botão 08-->
 
-    <!-- Botão 09 - Esconder Div-->
+    <!-- Botão 09 - Esconder div-->
     <input type="button" value="Esconder Div" onclick="esconderdiv()"/>
     <!--Fim Botão 09-->
 
@@ -66,27 +66,34 @@
     <!-- Botão 11 - Não -->
     <input type="button" value="Não" onclick="nao()" />
     <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
+
+    <!-- Botão 12 - Mudar cor do background do parágrafo -->
+    <input type="button" value="back Parágrafo" onclick="backgroundp()" />
+    <!--Fim Botão 12 -->
+
+    <!-- Botão 13 - Cor do botão -->
+    <input type="button" value="Cor Botão" onclick="mudacorbotao()" />
+    <!--Fim Botão 13 -->
+
+    <!-- Botão 14 - -->
+      <input type="button" value="Todos Botões" onclick="mudacorbotoes()">
+    <!--Fim Botão 14-->
+
+    <!-- Botão 15 - Conta botão -->
+    <input type="button" value="Conta Botão" onclick="contabotao()"/>
+    <!--Fim Botão 15-->
+
+    <!-- Botão 16 - -->
+    <input type="button" value="Censura" onclick="censura()"/>
+    <!--Fim Botão 16-->
+
+    <!-- Botão 17 - -->
+    <input type="button" value="Fundo" onclick="fundo()" />
+    <!--Fim Botão 17-->
+
+    <!-- Botão 18 - -->
+    <input type="button" value="Se forma no Senai" onclick="imagem()"/>
+    <!--Fim Botão 18-->
 
   </div>
   <!-- FIM da DIV que armazena todos os botões -->
@@ -95,17 +102,19 @@
   <img id="image" src="xuxa.jpg">
 
   <script> // Começa a brincadeira com JS
-    // Botão 02 - Tamanho Fonte - xx
+
+    // Botão 02 - Tamanho fonte - xx
     function mudatamanhofonte() {
       document.getElementById("manipula").style.fontSize = "20pt"
     }
     //fim do Botão 02
-    // Botão 03 - Cor Fonte
+    // Botão 03 - Cor fonte
     function mudacorfonte() {
       document.getElementById("manipula").style.color = "#ffffff"
 }
 //fim do Botão 03
-    // Botão 04 - Mudar Background div
+
+    // Botão 04 - Mudar background div
     function backdiv() {
       document.getElementById("manipula").style.backgroundColor = "black"
 }
@@ -126,7 +135,7 @@
       document.getElementById("manipula").style.border = "2px solid black"
     }
     //fim do Botão 
-    // Botão 08 - xx
+    // Botão 08 - Excluir borda
     function excluirborder() {
       document.getElementById("manipula").style.border = "0px"
     }
@@ -146,32 +155,58 @@
     function nao() {
       document.getElementsByClassName("chamada")[0].innerHTML = "Neste Botão Não"
     }
-    //fim do Botão X
-    // Botão X - xx
-    function x() {
+    //fim do Botão 11
 
+    // Botão 12 - Mudar cor do background do parágrafo
+    function backgroundp() {
+      document.getElementById("manipula").getElementsByClassName("paragrafo")[0].style.backgroundColor = "red"
     }
-    //fim do Botão X
-    // Botão X - xx
-    function x() {
+    //fim do Botão 12
 
+    // Botão 13 - xx
+    function mudacorbotao() {
+      document.getElementByTagName("input")[12].style.backgroundColor = "lightblue"
     }
-    //fim do Botão X
-    // Botão X - xx
-    function x() {
+    //fim do Botão 13
 
+    // Botão 14 - Muda cor de todos os botões 
+    function mudacorbotoes() {
+      var x = document.getElementById("botoes")
+      var y = x.getElementsByTagName("input")
+      var i 
+      for (i = 0; i < y.length; i++){
+        y[i].style.backgroundColor = "#CDB0FA"
+      }
     }
-    //fim do Botão X
-    // Botão X - xx
-    function x() {
+    //fim do Botão 14
 
+    // Botão 15 - xx
+    function contabotao() {
+      let x = document.getElementById("botoes").getElementsByTagName('input')
+      document.getElementById("manipula").innerHTML = x.length
     }
-    //fim do Botão X
-    // Botão X - xx
-    function x() {
+    //fim do Botão 15
 
+    // Botão 16 - Censura
+    function censura() {
+      document.querySelector("p.paragrafo").innerHTML = "**********"
     }
-//fim do Botão X
+//fim do Botão 16
+
+
+    // Botão 17 - Fundo
+    function fundo() {
+      document.querySelector("body").style.backgroundColor = "black"
+    }
+//fim do Botão 17
+
+    // Botão 18 - Imagem
+    function imagem() {
+      var img = document.querySelector("#image")
+      img.setAttribute("src", "alien.jpg")
+    }
+//fim do Botão 18
+
   </script> <!-- Termina a brincadeira com JS -->
 
   <br>
